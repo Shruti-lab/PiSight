@@ -1,0 +1,1 @@
+mobile user interface compatible with the assitive glasses.
