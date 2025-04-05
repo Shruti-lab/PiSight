@@ -8,3 +8,6 @@ pyaudio
 SpeechRecognition
 easyocr
 flask
+
+picamzero
+flask

@@ -20,8 +20,9 @@ def process_image():
     results = reader.readtext(img)
 
     # Format the results
-    output = [{'text': text, 'prob': prob} for (bbox, text, prob) in results]
-    return jsonify(output)
+    output_text = ' '.join([text for (_, text, _) in results])
+    return jsonify({'text': output_text})
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050)
