@@ -1,8 +1,11 @@
+# rasPI OCR Client
+
 import cv2
 import requests
 from picamzero import Camera
 import numpy as np
 import time
+import os
 
 server_url = 'http://192.168.29.163:5050/process_image'
 
@@ -24,7 +27,9 @@ try:
             response = requests.post(server_url, files={'image': img_bytes}, timeout=5000)
             response.raise_for_status()
             results = response.json()
-            print("[RESULTS]", results if results else "No text detected.")
+            text = results.get('text','')
+            print("[RESULTS]", text if results else "No text detected.")
+            os.system(f'espeak "{text}"')
         except Exception as e:
             print("[ERROR] While sending frame:", e)
 
