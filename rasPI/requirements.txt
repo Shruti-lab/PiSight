@@ -1,4 +1,4 @@
-﻿pyttsx3
+pyttsx3
 pytesseract
 pillow
 opencv-python
@@ -8,6 +8,5 @@ pyaudio
 SpeechRecognition
 easyocr
 flask
-
 picamzero
-flask
+inference_sdk
