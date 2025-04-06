@@ -8,7 +8,7 @@
 
 Millions of individuals with visual impairments face challenges in navigating their surroundings, recognizing obstacles, reading text, and responding to emergencies independently. Existing assistive technologies are often bulky, expensive, or lack real-time feedback and intelligent interaction. There is a need for an affordable, lightweight, and intelligent wearable solution that can **capture the environment, interpret visual data, detect hazards, and respond to voice commands** — all in real-time, without relying on internet connectivity. And that is exactly what we are implementing through PiSIGHT!
 
-**Track - Automation**
+**Track - Automation** | [Project Demo↗️](https://youtu.be/xeHEWLYYxPo)
 
 ## 🌟 **Key Features of our Solution**
 
@@ -38,6 +38,50 @@ Millions of individuals with visual impairments face challenges in navigating th
     </td>
   </tr>
 </table>
+
+## 🧰 **Tech Stack**
+
+| Layer             | Tools / Technologies Used                                    |
+|------------------|--------------------------------------------------------------|
+| **Hardware**      | Raspberry Pi 4, Pi Camera Module v2, Bone Conduction Speakers |
+| **Programming**   | Python, Shell Scripts                                        |
+| **Computer Vision** | OpenCV, Roboflow Inference API, OCR (Tesseract)             |
+| **Speech & Audio**| eSpeak (Text-to-Speech), SpeechRecognition Library           |
+| **Edge Computing**| On-device inference using YOLOv5 for object & weapon detection |
+| **Voice Commands**| Google Speech Recognition API                                |
+| **Interface**     | Minimal CLI + Audio feedback system                          |
+
+
+## 💻 **Developer Setup**
+
+#### 🔧 PREREQUISITES 
+- Set up your **Raspberry Pi 4** using [this official guide](https://www.raspberrypi.com/documentation/computers/getting-started.html)  
+- Connect and configure the **Camera Module v2** using [this tutorial](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/2)
+
+  
+1. **On your Raspberry Pi OS, clone the repository**  
+   ```bash
+   git clone https://github.com/unmani-shinde/PiSight
+   ```
+
+2. **Navigate to the project directory**  
+   ```bash
+   cd PiSight/rasPI
+   ```
+
+3. **Install all required dependencies**  
+   ```bash
+   python setup_env.py
+   ```
+
+That’s it! Your PiSIGHT environment is ready to explore and build on.
+PS. If there are any installation errors, try creating a new virtual environment using `pip` as follows: 
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
 
 
 ## 👩🏻‍💻**Contributors**
